@@ -10,13 +10,12 @@
 #grid_wrapper {
     display: grid;
     grid-template-columns: 1fr 75px;
-    grid-template-rows: 100px 400px 400px 400px 400px 100px;
+    grid-template-rows: 100px 600px 300px 400px 100px;
     grid-template-areas: 
         "he na"
+        "ma ma"
         "s1 s1"
         "s2 s2"
-        "s3 s3"
-        "s4 s4"
         "fo fo"
         ;
 }
@@ -37,6 +36,56 @@ nav {
     background-color: rgb(228, 98, 0);
     grid-area: na;
 }
+
+
+main  {
+    grid-area:ma;
+    background-color: red;
+}
+
+#news_image{
+    height:250px;
+    width:100%;
+}
+
+#current_issues{
+    grid-area:s1;
+    background-color: purple;
+}
+
+.issue{
+    padding:20px;
+    border: 1px solid black;
+    height:50px;
+    
+}
+
+.icon{
+    width:20px;
+}
+
+
+#video{
+    grid-area:s2;
+    background-color: yellow;
+}
+
+
+
+footer{
+    grid-area:fo;
+    background-color: aquamarine;
+}
+
+h3{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+
 
 
 #flag{

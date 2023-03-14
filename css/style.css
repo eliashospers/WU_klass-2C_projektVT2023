@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     color:rgb(0, 0, 0);
+    overflow-x: hidden;
 
 }
 
@@ -13,7 +14,7 @@
     grid-template-columns: 1fr 75px;
     grid-template-rows: 100px 4fr 300px 400px 1fr;
     grid-template-areas: 
-        "he na"k
+        "he na"
         "ma ma"
         "s1 s1"
         "s2 s2"
@@ -24,12 +25,13 @@
 #grid_wrapper_about {
     display: grid;
     grid-template-columns: 1fr 75px;
-    grid-template-rows: 100px 4fr 300px 400px 1fr;
+    grid-template-rows: 100px 100px 100px 1fr 1fr 200px;
     grid-template-areas: 
         "he na"
         "ma_a ma_a"
         "se1 se1"
         "s2 s2"
+        "s3 s3"
         "fo fo"
         ;
 }
@@ -189,44 +191,54 @@ h2{
 
 
 
-#listerner-left{
-    height: 20px;
-    width: 20px;
-    position: relative;
-    top:-125px;
-    left: 25px;
-    rotate: 90deg;
-}
-
-#place-for-sliding-img{
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-#slide_img{
-    width: 100%;
-}
-
-#listerner-right{
-    height: 20px;
-    width: 20px;
-    position: relative;
-    top:-125px;
-    left: 300px;
-    rotate: -90deg;
-}
-
-
 #small_info_box{
     grid-area:se1;
     border: 1px solid black;
     height: fit-content;
+    
 
-    left: 50%;
-    margin-right: -50%;
-
+    
 
 
     
 }
+
+
+
+#big_info_box {
+    grid-area:s2;
+    background-color: rgb(234, 119, 22);
+
+    margin:10px;
+    margin-top: 50px;
+    height:fit-content;
+    font-weight:900;
+
+  }
+  
+  table {
+    
+    border-collapse: collapse;
+    color: white;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 20px;
+    border-bottom: 1px solid white;
+    color: white;
+    
+  }
+  
+  #first_row {
+    background-color: rgb(234, 119, 22);
+  
+    
+  }
+
+  tr{
+    background: rgb(211, 172, 1);
+  }
+
+
+

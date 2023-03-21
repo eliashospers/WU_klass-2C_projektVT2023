@@ -25,13 +25,14 @@
 #grid_wrapper_about {
     display: grid;
     grid-template-columns: 1fr 75px;
-    grid-template-rows: 100px 100px 100px 1fr 1fr 200px;
+    grid-template-rows: 100px 400px 100px 1fr 1fr 1fr 200px;
     grid-template-areas: 
         "he na"
         "ma_a ma_a"
         "se1 se1"
-        "s2 s2"
-        "s3 s3"
+        "se2 se2"
+        "se3 se3"
+        "se4 se4"
         "fo fo"
         ;
 }
@@ -192,9 +193,11 @@ h2{
 
 
 #small_info_box{
+    background-color: rgb(0, 145, 61);
     grid-area:se1;
     border: 1px solid black;
     height: fit-content;
+    padding:20px;
     
 
     
@@ -206,7 +209,7 @@ h2{
 
 
 #big_info_box {
-    grid-area:s2;
+    grid-area:se2;
     background-color: rgb(234, 119, 22);
 
     margin:10px;
@@ -219,14 +222,14 @@ h2{
   table {
     
     border-collapse: collapse;
-    color: white;
+
   }
   
   th, td {
     text-align: left;
     padding: 20px;
     border-bottom: 1px solid white;
-    color: white;
+    color: rgb(255, 255, 255);
     
   }
   
@@ -241,4 +244,35 @@ h2{
   }
 
 
+.facts{
+    height:fit-content;
+    background-color: rgb(255, 255, 255);
+    border:5px solid green;
+    text-align:left;
+}
+
+#nature{
+    grid-area:se3;
+}
+.facts_image{
+    margin-top:50px;
+    height:200px;
+    width:100%;
+    
+}
+
+.facts h4{
+    font-style:italic;
+    
+}
+
+.facts p{
+    margin:10px;
+    
+}
+
+#people_and_culture{
+    grid-area:se4;
+    
+}
 

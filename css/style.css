@@ -3,6 +3,7 @@
     padding: 0;
     color:rgb(0, 0, 0);
     overflow-x: hidden;
+    box-sizing: border-box;
 
 }
 
@@ -25,7 +26,7 @@
 #grid_wrapper_about {
     display: grid;
     grid-template-columns: 1fr 75px;
-    grid-template-rows: 100px 400px 100px 1fr 1fr 1fr 200px;
+    grid-template-rows: 100px 400px 100px 1fr 1450px 350px 1fr 200px;
     grid-template-areas: 
         "he na"
         "ma_a ma_a"
@@ -33,6 +34,7 @@
         "se2 se2"
         "se3 se3"
         "se4 se4"
+        "se5 se5"
         "fo fo"
         ;
 }
@@ -216,6 +218,7 @@ h2{
     margin-top: 50px;
     height:fit-content;
     font-weight:900;
+    margin-bottom: 50px;
 
   }
   
@@ -247,12 +250,14 @@ h2{
 .facts{
     height:fit-content;
     background-color: rgb(255, 255, 255);
-    border:5px solid green;
+    border:8px solid green;
     text-align:left;
 }
 
 #nature{
     grid-area:se3;
+    
+    
 }
 .facts_image{
     margin-top:50px;
@@ -261,18 +266,55 @@ h2{
     
 }
 
-.facts h4{
+.facts_image_text{
     font-style:italic;
+    margin:5px;
+    font-size: small;
     
 }
 
 .facts p{
-    margin:10px;
+    margin:20px;
+    line-height: 1.5;
     
 }
 
+.facts_box_title{
+    
+    margin-top:20px;
+}
+
 #people_and_culture{
-    grid-area:se4;
+    grid-area:se5;
     
 }
+
+#example_image{
+    height:fit-content;
+    grid-area:se4;
+    margin-top: 20px;
+    
+    
+    
+}
+
+#wadiya_example_image{
+    
+    height:250px;
+    padding-left:15px;
+    
+  
+    
+}
+
+
+#grid_wrapper_government{
+    grid-template-columns: 1fr 75px;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas:
+    "he na"
+    "ma_g ma_g"
+    "fo fo"
+}
+
 

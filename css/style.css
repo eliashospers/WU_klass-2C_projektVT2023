@@ -112,6 +112,7 @@ main p{
     height:250px;
     width:100%;
     object-fit:cover;
+    
 }
 
 #current_issues{
@@ -184,8 +185,9 @@ footer{
     
 }
 
-footer h5{
+footer p{
     font-size: 17px;
+    color:white;
 
 }
 
@@ -389,8 +391,14 @@ h2{
     color:black;
 }
 
-#small_info_box h3{
+#small_info_box p{
     color:black;
+    text-align: left;
+    font-size:2rem;
+    font-weight:bold;
+    padding-left:50px;
+    padding-right:10px;
+    
 }
 
 
@@ -461,6 +469,7 @@ h2{
     font-size: small;
     font-weight: 200;
     color: black;
+    margin:0;
     
 }
 
@@ -537,7 +546,8 @@ h2{
 
 
 
-#government_main h3{
+.government_text{
+    font-size:1.5rem;
     color:black;
     line-height: 1.2;
     margin-bottom:20px;
@@ -639,6 +649,8 @@ h2{
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
+    height:auto;
+    max-width:100%;
 
 }
 
@@ -732,7 +744,7 @@ h2{
 
 #main_news{
     grid-area:ma;
-    position:relative;
+   
     margin-bottom:50px;
     
 }
@@ -743,15 +755,28 @@ h2{
     text-align: center;
 }
 
-b{
-    color:blacK;
+#latest_news_image{
+    height:auto;
+    max-width:100%;
+    object-fit: cover;
+    
+    
+    
 }
 
-#main_news h5{
+b{
+    color:black;
+}
+
+#author_text{
     color:rgb(69, 65, 65);
     text-align: center;
     margin-top:20px;
     margin-bottom:10px;
+}
+
+#article_description{
+    text-align:center;
 }
 #main_news h3{
     margin-top: 20px;
@@ -759,27 +784,10 @@ b{
 }
 
 
-#box{
-    height:26px;
-    width:90px;
-    background-color: rgb(234, 119, 22);
-    position: absolute;
-    top: 68%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    
-    
-}
 
-#box p{
-    padding-top:3px;
-    padding-bottom:3px;
-    color:white;
-    letter-spacing: 0.5px;
-    font-size: 13px;
 
-}
+
+
 
 #first_articles{
     grid-area:s1_n;
@@ -796,6 +804,7 @@ b{
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom:50px;
    
 
 
@@ -812,11 +821,19 @@ b{
 .vl {
     border-left: 1px solid rgb(114, 111, 111);
 
-    height: 500px;
+    height: auto;
 
   }
 
 #first_articles p{
+    font-size: 14px;
+    line-height:22px;
+
+    padding:5px;
+}
+
+#first_articles h3{
+    text-align: left;
     font-size: 14px;
     line-height:22px;
 
@@ -839,6 +856,7 @@ b{
 
 #popular_articles{
     grid-area:s2_n;
+    margin-bottom:50px;
 }
 
 
@@ -847,7 +865,12 @@ b{
     text-align: left;
     padding:5px;
     line-height: 28px;
+    
 
+}
+
+#popular_articles h3:hover{
+    text-decoration:underline;
 }
 
 
@@ -858,8 +881,8 @@ b{
 #popular_articles h2{
     color:rgb(69, 65, 65);
     text-align: left;
-
-    font-size:50px;
+    padding:5px;
+    line-height: 28px;
 }
 
 #popular_stats{
@@ -868,6 +891,13 @@ b{
     position: relative;
 
 
+}
+
+#readers_number{
+    color:rgb(69, 65, 65);
+    text-align: left;
+
+    font-size:50px;
 }
 
 
@@ -888,6 +918,14 @@ b{
     margin-right:10px;
 }
 
+#departments{
+    display:none;
+}
+
+#menu_desktop{
+    display: none;
+}
+
 
 
 @media screen and (min-width:800px) {
@@ -902,9 +940,23 @@ b{
 
 
 
-    #burger{
-        margin-right:80px
+    
+
+    #menu_desktop{
+        grid-area:na;
+        background-color: green;
+        height:70px;
+        display:flex;
+        justify-content: space-evenly;
     }
+
+
+    #menu_desktop a{
+        color:#ffffff;
+        text-decoration: none;
+        
+    }
+
 
 
 
@@ -914,9 +966,10 @@ b{
     #grid_wrapper{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 100px auto auto 200px;
+        grid-template-rows: 100px auto auto auto 200px;
         grid-template-areas: 
-            "he he he he na"
+            "he he he he he"
+            "na na na na na"
             "ma ma ma s1 s1"
             "s2 s2 s2 s2 s2"
             "fo fo fo fo fo"
@@ -956,9 +1009,10 @@ b{
     #grid_wrapper_about{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 100px auto auto auto auto 200px;
+        grid-template-rows: 100px auto auto auto auto auto 200px;
         grid-template-areas: 
-            "he he he he he na"
+            "he he he he he he"
+            "na na na na na na"
             "ma_a ma_a ma_a ma_a se2 se2"
             "se1 se1 se1 se1 se2 se2"
             "se4 se4 se4 se4 . ."
@@ -1009,10 +1063,11 @@ b{
     #grid_wrapper_government{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 100px auto auto auto auto auto auto;
+        grid-template-rows: 100px auto auto auto auto auto auto auto;
         grid-template-areas:
-        "he he he he he na"
-        "ma_g ma_g ma_g ma_g ma_g ma_g"
+        "he he he he he he"
+        "na na na na na na"
+        "ma_g ma_g ma_g ma_g as as"
         "s1_g s1_g s1_g s1_g s1_g s1_g"
         "s2_g s2_g s2_g s2_g s2_g s2_g"
         "s3_g s3_g s3_g s3_g s3_g s3_g"
@@ -1022,24 +1077,54 @@ b{
         }
     #government_image{
         display:block;
-        height:400px;
-        width:60%;
+        height:auto;
+        max-width:100%;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto
     }
    
 
     #government_main h2{
-        margin-left:30vw;
+        
+        text-align: center;
         
 
     }
     #government_main h3{
-        margin-left:18vw;
+        text-align: center;
         
      
 
 
+    }
+    #departments{
+        margin-top:50px;
+        display:flex;
+        flex-direction: column;
+        
+    }
+
+    #departments h2{
+        color:black;
+        text-align:center;
+        position: absolute;
+       
+    }
+    #departments h3{
+        
+        color:black;
+        font-size:1rem;
+        font-weight:200;
+        text-align:left;
+        margin:10px;
+    }
+
+    #departments h3:first-child{
+        margin-top:50px;
+    }
+
+    #departments h3:hover{
+        text-decoration:underline;
     }
 
 
@@ -1056,6 +1141,18 @@ b{
         grid-area:ma_g;
         padding:50px;
         margin: 0 auto;
+    }
+
+    #government_image_box{
+        height:auto;
+        background-color: rgb(209, 206, 206);
+        padding:10px;
+    }
+
+    #government_image_text{
+        color:rgb(0, 0, 0);
+        font-weight:400;
+        font-size:1rem;
     }
 
     #government_people{
@@ -1083,7 +1180,8 @@ b{
     }
 
     .priorities{
-        height:200px;
+        height:auto;
+        margin-bottom:50px;
     
     
     }
@@ -1092,11 +1190,12 @@ b{
     #grid_wrapper_news{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 100px auto auto auto auto ;
+        grid-template-rows: 100px auto auto auto auto auto ;
         grid-template-areas: 
-        "he he he he he na"
+        "he he he he he he"
+        "na na na na na na"
         "ma ma ma ma s2_n s2_n"
-        "s1_n s1_n s1_n s1_n s2_n s2_n"
+        "s1_n s1_n s1_n s1_n s3_n s3_n"
         "fo fo fo fo fo fo";
     
         
@@ -1106,14 +1205,39 @@ b{
         ;
 
     }
-    #box{
-        top:70%;
+
+    #weather{
+        grid-area:s3_n;
     }
+
+    #weather h3{
+        color:black;
+    }
+
+    #coming_weather{
+        display:flex;
+        justify-content: space-evenly;
+    }
+
+    #current_weather{
+        display:flex;
+        justify-content: center;
+        
+    }
+
+    .weather_description{
+        display:flex;
+        flex-direction: column;
+    }
+    
 
     .first_articles_image{
         width:300px;
         height:150px;
     }
+
+
+
 
     
 }

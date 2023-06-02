@@ -191,6 +191,10 @@ footer p{
 
 }
 
+footer h2{
+    font-size: 1rem;
+}
+
 
 h3{
     text-align: center;
@@ -525,6 +529,7 @@ h2{
     grid-template-areas:
     "he na"
     "ma_g ma_g"
+    "as as"
     "s1_g s1_g"
     "s2_g s2_g"
     "s3_g s3_g"
@@ -540,8 +545,23 @@ h2{
 
 
 #government_image{
-    height:300px;
-    width:100%
+    
+    height:auto;
+    max-width:100%;
+    margin-bottom:0;
+}
+
+#government_image_box{
+    
+    height:auto;
+    background-color: rgb(209, 206, 206);
+    padding:10px;
+}
+
+#government_image_text{
+    color:rgb(0, 0, 0);
+    font-weight:400;
+    font-size:1rem;
 }
 
 
@@ -642,6 +662,18 @@ h2{
    
 }
 
+#leader h4{
+    letter-spacing: 0.03rem;
+    color:white;
+}
+
+#leader h5{
+    font-size:1.5rem;
+    margin-top:20px;
+    text-align:center;
+    font-style:italic;
+}
+
 
 #leader_image{
     display: block;
@@ -664,12 +696,22 @@ h2{
     
 }
 
+.politician h4{
+    color:rgb(237, 237, 237);
+}
+
+.politician hr{
+    width:80%;
+    margin-left:20px;
+}
+
 
 .politician_image{
     height:235px;
     width:165px;
     margin:20px;
     object-fit: cover;
+    filter: grayscale(0.7);
   
    border: 1px solid black;
 
@@ -733,6 +775,7 @@ h2{
     "ma ma"
     "s1_n s1_n"
     "s2_n s2_n"
+    "s3_n s3_n"
     "fo fo";
 
     
@@ -758,7 +801,7 @@ h2{
 #latest_news_image{
     height:auto;
     max-width:100%;
-    object-fit: cover;
+
     
     
     
@@ -918,14 +961,96 @@ b{
     margin-right:10px;
 }
 
+#weather{
+    grid-area:s3_n;
+    margin-bottom:50px;
+}
+
+#weather h3{
+    color:black;
+}
+
+#weather p{
+    text-align: center;
+}
+
+#coming_weather{
+    display:flex;
+    justify-content: space-evenly;
+
+}
+
+#current_weather{
+    display:flex;
+    justify-content: center;
+    padding:20px;
+    
+}
+#current_weather p{
+    margin-top:35px;
+    margin-left:20px;
+    
+}
+
+
+
+.weather_description{
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+
 #departments{
-    display:none;
+    grid-area:as;
+
+
+    margin-top:30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:30px;
+    
+}
+
+#departments h2{
+    font-size:1.2rem;
+    color:rgb(51, 50, 50);
+    text-align:left;
+    margin-left:20px;
+
+
+
+   
+}
+
+#departments hr{
+    width:60%;
+}
+#departments h3{
+    
+    color:black;
+    font-size:1rem;
+    font-weight:200;
+    text-align:left;
+    margin:10px;
+}
+
+
+
+#departments h3:hover{
+    text-decoration:underline;
 }
 
 #menu_desktop{
     display: none;
 }
 
+#meter_icon{
+    width:fit-content;
+    height:auto;
+}
 
 
 @media screen and (min-width:800px) {
@@ -965,14 +1090,14 @@ b{
 
     #grid_wrapper{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 100px auto auto auto 200px;
         grid-template-areas: 
-            "he he he he he"
-            "na na na na na"
-            "ma ma ma s1 s1"
-            "s2 s2 s2 s2 s2"
-            "fo fo fo fo fo"
+            "he he he"
+            "na na na"
+            "ma ma s1"
+            "s2 s2 s2"
+            "fo fo fo"
             ;
        
     
@@ -1062,17 +1187,17 @@ b{
 
     #grid_wrapper_government{
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 100px auto auto auto auto auto auto auto;
         grid-template-areas:
-        "he he he he he he"
-        "na na na na na na"
-        "ma_g ma_g ma_g ma_g as as"
-        "s1_g s1_g s1_g s1_g s1_g s1_g"
-        "s2_g s2_g s2_g s2_g s2_g s2_g"
-        "s3_g s3_g s3_g s3_g s3_g s3_g"
-        "s4_g s4_g s4_g s4_g s4_g s4_g"
-        "fo fo fo fo fo fo"
+        "he he he "
+        "na na na"
+        "ma_g ma_g as"
+        "s1_g s1_g s1_g"
+        "s2_g s2_g s2_g"
+        "s3_g s3_g s3_g"
+        "s4_g s4_g s4_g"
+        "fo fo fo"
     ;
         }
     #government_image{
@@ -1098,17 +1223,28 @@ b{
 
     }
     #departments{
+        grid-area:as;
+
+        margin-left:50px;
         margin-top:50px;
         display:flex;
         flex-direction: column;
-        
+        align-items:normal
     }
 
     #departments h2{
-        color:black;
-        text-align:center;
-        position: absolute;
+        font-size:1.2rem;
+        color:rgb(51, 50, 50);
+        text-align:left;
+        margin-left:20px;
+
+
+
        
+    }
+
+    #departments hr{
+        width:60%;
     }
     #departments h3{
         
@@ -1119,9 +1255,7 @@ b{
         margin:10px;
     }
 
-    #departments h3:first-child{
-        margin-top:50px;
-    }
+
 
     #departments h3:hover{
         text-decoration:underline;
@@ -1143,17 +1277,7 @@ b{
         margin: 0 auto;
     }
 
-    #government_image_box{
-        height:auto;
-        background-color: rgb(209, 206, 206);
-        padding:10px;
-    }
-
-    #government_image_text{
-        color:rgb(0, 0, 0);
-        font-weight:400;
-        font-size:1rem;
-    }
+    
 
     #government_people{
         padding-bottom:50px;
@@ -1190,7 +1314,7 @@ b{
     #grid_wrapper_news{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 100px auto auto auto auto auto ;
+        grid-template-rows: 100px auto auto auto 200px  ;
         grid-template-areas: 
         "he he he he he he"
         "na na na na na na"
@@ -1208,22 +1332,45 @@ b{
 
     #weather{
         grid-area:s3_n;
+        margin-bottom:50px;
+    }
+
+    #weather h4{
+        color:black;
     }
 
     #weather h3{
+        font-weight:normal;
+    }
+
+    #now{
+        font-weight:bold;
         color:black;
+    }
+
+    #weather p{
+        text-align: center;
     }
 
     #coming_weather{
         display:flex;
         justify-content: space-evenly;
+
     }
 
     #current_weather{
         display:flex;
         justify-content: center;
+        padding:15px;
         
     }
+    #current_weather p{
+        margin-top:35px;
+        margin-left:20px;
+        
+    }
+
+
 
     .weather_description{
         display:flex;
